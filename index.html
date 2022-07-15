@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .sliderSimpel {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="" alt="" class="sliderSimpel" />
+    <script>
+      let angkaSlider = 0;
+      function sliderSimpel() {
+        // jeda 1 detik
+        const list = [
+          "//kliniksengkang.id/wp-content/uploads/2022/06/apotek-sengkang-1-scaled-1.webp",
+          "//kliniksengkang.id/wp-content/uploads/2022/06/apotek-sengkang-2-scaled-1.webp",
+          "//kliniksengkang.id/wp-content/uploads/2022/06/apotek-sengkang-3-scaled-1.webp",
+          "//kliniksengkang.id/wp-content/uploads/2022/06/apotek-sengkang-4-scaled-1.webp",
+        ];
+        const elSlider = document.querySelector(".sliderSimpel");
+        elSlider.src = list[angkaSlider % list.length];
+        angkaSlider++;
+      }
+      sliderSimpel();
+      setInterval(sliderSimpel, 1000 * 60);
+    </script>
+  </body>
+</html>
